@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="D0ABAAE4-4FB0-D785-480A-90E69294BB6C" name="UBIGEO" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="2481F0CE-9202-0266-2CC4-CC8F982D32AB" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="68B2A5C0-9477-D43B-B7A0-8B4FA4956F8D" name="USUARIO" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="2481F0CE-9202-0266-2CC4-CC8F982D32AB" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="354EB90B-2BEE-5C96-994F-FB1AFAAB168A" name="Relation_5" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="2481F0CE-9202-0266-2CC4-CC8F982D32AB" propertySourceId="D0ABAAE4-4FB0-D785-480A-90E69294BB6C" propertyTargetId="68B2A5C0-9477-D43B-B7A0-8B4FA4956F8D"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

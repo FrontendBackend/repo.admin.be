@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="modelo_db_administrativo" id="BFE45713-B374-1689-401D-8FDAC1A95042" version="3.5">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 19:56:42 UTC</createdTime>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<capitalNames>false</capitalNames>
+<designId>BFE45713-B374-1689-401D-8FDAC1A95042</designId>
+</OSDM_Design>

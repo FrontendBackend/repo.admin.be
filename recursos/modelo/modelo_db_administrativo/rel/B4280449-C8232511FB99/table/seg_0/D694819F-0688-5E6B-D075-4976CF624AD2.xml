@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D694819F-0688-5E6B-D075-4976CF624AD2" name="TBL_UBIGEO">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>D0ABAAE4-4FB0-D785-480A-90E69294BB6C</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<ordsAlias>ubigeo</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_UBIGEO" id="86626510-7932-13B6-CBA8-23B8FEDD33A2">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>58F5FB03-A57A-5DEC-232B-1DAAA5695CE3</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CODIGO_UBIGEO" id="14812181-4FD8-F56A-143E-0D66DCFA6E7D">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-04 05:04:37 UTC</createdTime>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DEPARTAMENTO" id="F348FEE4-3E71-413A-2169-0CFD96894118">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>EB69FAE6-8F34-A9A1-D6B8-E624529F8F2F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="PROVINCIA" id="351125D7-6471-3919-F5AA-E15CD3331D22">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>5F1CBE23-4EC2-4871-25CF-CBBD64AF5936</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DISTRITO" id="371B9B7D-4894-B26A-566F-47E523C50C36">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>2277C572-C99A-4BC8-01AD-6D43181D1F9C</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100</dataTypeSize>
+<ownDataTypeParameters>100,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="9DD2BA9E-B5AD-AFAE-11FE-3F2AD78D1166" name="UBIGEO_PK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>5555837C-C1E7-EC62-7574-1976B34F8F0E</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="86626510-7932-13B6-CBA8-23B8FEDD33A2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

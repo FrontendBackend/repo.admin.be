@@ -1,0 +1,6 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.relational.RelationalDesign>
+   <object objectType="Table" objectID="D694819F-0688-5E6B-D075-4976CF624AD2" name="TBL_UBIGEO" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="B4280449-6E7F-66F8-CF25-C8232511FB99" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Table" objectID="36FEDD9A-5D5D-0358-D6CE-BC24BE2FD205" name="TBL_USUARIO" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.relational.Table" propertyParentId="B4280449-6E7F-66F8-CF25-C8232511FB99" propertySourceId="" propertyTargetId=""/>
+   <object objectType="FKIndexAssociation" objectID="203455FE-EFE7-A96B-50DD-E32BCA8A8830" name="USUARIO_UBIGEO_FK" seqName="seg_0" containerID="36FEDD9A-5D5D-0358-D6CE-BC24BE2FD205" refContainerID="D694819F-0688-5E6B-D075-4976CF624AD2" propertyClassName="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" propertyParentId="B4280449-6E7F-66F8-CF25-C8232511FB99" propertySourceId="D694819F-0688-5E6B-D075-4976CF624AD2" propertyTargetId="36FEDD9A-5D5D-0358-D6CE-BC24BE2FD205"/>
+</oracle.dbtools.crest.model.design.relational.RelationalDesign>

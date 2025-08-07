@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="203455FE-EFE7-A96B-50DD-E32BCA8A8830" containerWithKeyObject="36FEDD9A-5D5D-0358-D6CE-BC24BE2FD205" localFKIndex="0AA2CB20-0A25-2978-9121-18ECAAC9D09E" name="USUARIO_UBIGEO_FK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-03 20:12:57 UTC</createdTime>
+<generatorID>354EB90B-2BEE-5C96-994F-FB1AFAAB168A</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<referredTableLongName>TBL_UBIGEO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>D694819F-0688-5E6B-D075-4976CF624AD2</referredTableID>
+<keyObject>9DD2BA9E-B5AD-AFAE-11FE-3F2AD78D1166</keyObject>
+<referredKeyID>9DD2BA9E-B5AD-AFAE-11FE-3F2AD78D1166</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_UBIGEO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

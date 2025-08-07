@@ -2,6 +2,8 @@ class CrearUsuarioDTO {
   constructor(data) {
     this.nombreUsuario = data.nombreUsuario?.trim();
     this.correoUsuario = data.correoUsuario?.trim();
+    this.idUbigeo = data.idUbigeo;
+    this.feNacimiento = data.feNacimiento;
   }
 
   validate() {
@@ -16,6 +18,8 @@ class ModificarUsuarioDTO {
   constructor(data) {
     this.nombreUsuario = data.nombreUsuario?.trim();
     this.correoUsuario = data.correoUsuario?.trim();
+    this.idUbigeo = data.idUbigeo;
+    this.feNacimiento = data.feNacimiento;
   }
 
   validate() {
