@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="modelo_db_administrativo">
+   <domains>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_30" id="2C28562E-E9A1-E759-8694-9E019665D01B">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>6B8882F4-8FF3-9BAB-033B-A5380D18C967</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>30</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_64" id="8C686F3C-7891-D2C2-B3DC-61EF715E1CE3">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>B7A914CB-62CF-2881-7492-46FD9EA97581</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>64</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_8_0_0" id="91359A7D-E3B4-A4A4-40D7-C4A9635ED0BC">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>C323ABFC-FFF1-5216-00EE-4E8F35E338D2</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>8</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>0</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT019</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_128" id="960019BC-85C2-900F-0BB3-6E232F36DE71">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>0085A62C-723A-9B8B-3698-20356300C410</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>128</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_38" id="AC6A20F2-741F-343C-F5A3-D5FECDBD2AB3">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>FEEF8E38-6237-BED0-4521-2DB2790E6C84</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>38</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="CHAR_0_0_1" id="E2DDB974-EB7F-993A-47F1-AF5FB2352083">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>6A4BA256-8AAE-AB12-7C93-C1BF1F25C2C6</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>1</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT025</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="E794B82D-202F-54D3-3105-40D60E8F8971">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT007</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="E7C8D971-ECD0-BFD1-8590-1E329BCEE017">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>7387F931-2D6F-FE15-080C-763FEFCB431D</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>100</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+      <Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_512" id="E7EB460D-6C8A-8C27-6164-9F93E5CDF313">
+         <createdBy>jvale</createdBy>
+         <createdTime>2025-08-08 05:26:14 UTC</createdTime>
+         <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+         <remoteDesignID>31B6554D-C39F-1144-5626-39C0BD1E3A23</remoteDesignID>
+         <remoteObjectID>0A726890-A010-BBD9-FC7B-D6F4BC5A58FE</remoteObjectID>
+         <remoteObjectRelativeStorageName>\domains\mb_tables_Domains.xml</remoteObjectRelativeStorageName>
+         <avTSortOrder>0</avTSortOrder>
+         <dataTypePrecision>0</dataTypePrecision>
+         <dataTypeScale>0</dataTypeScale>
+         <dataTypeSize>512</dataTypeSize>
+         <fileName>modelo_db_administrativo</fileName>
+         <logicalDatatype>LOGDT024</logicalDatatype>
+      </Domain>
+   </domains>
+</DomainFile>

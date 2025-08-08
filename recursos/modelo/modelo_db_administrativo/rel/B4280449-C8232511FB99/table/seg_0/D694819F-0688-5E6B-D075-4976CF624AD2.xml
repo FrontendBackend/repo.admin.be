@@ -73,7 +73,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="9DD2BA9E-B5AD-AFAE-11FE-3F2AD78D1166" name="UBIGEO_PK">
+<ind_PK_UK id="9DD2BA9E-B5AD-AFAE-11FE-3F2AD78D1166" name="TBL_UBIGEO_PK">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:12:57 UTC</createdTime>
 <generatorID>5555837C-C1E7-EC62-7574-1976B34F8F0E</generatorID>

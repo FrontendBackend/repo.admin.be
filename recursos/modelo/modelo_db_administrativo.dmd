@@ -5,4 +5,9 @@
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
 <capitalNames>false</capitalNames>
 <designId>BFE45713-B374-1689-401D-8FDAC1A95042</designId>
+<usedDesignStorageDescriptors>
+<designDescr class="oracle.dbtools.crest.model.design.Design$DesignStorageDesc" id="31B6554D-C39F-1144-5626-39C0BD1E3A23">
+<designStoragePath>C:\dev\osi.pgim.repo\osi.pgim.modelo\PGIM.Modelo de datos</designStoragePath>
+</designDescr>
+</usedDesignStorageDescriptors>
 </OSDM_Design>

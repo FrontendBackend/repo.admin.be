@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="68B2A5C0-9477-D43B-B7A0-8B4FA4956F8D" name="USUARIO">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="68B2A5C0-9477-D43B-B7A0-8B4FA4956F8D" name="TBL USUARIO">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 19:59:17 UTC</createdTime>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="ID_USUARIO" id="0A662603-5027-A473-C576-EC7873C5E8C8">
+<Attribute name="ID USUARIO" id="0A662603-5027-A473-C576-EC7873C5E8C8">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 19:59:46 UTC</createdTime>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
@@ -27,7 +27,7 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="NOMBRE_USUARIO" id="17E393D8-0200-243F-CDB5-F17CBA304B5F">
+<Attribute name="NOMBRE USUARIO" id="17E393D8-0200-243F-CDB5-F17CBA304B5F">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:01:42 UTC</createdTime>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
@@ -41,7 +41,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="CORREO_USUARIO" id="023CE7C1-1AF3-6E57-A2DB-4D034F16BF7E">
+<Attribute name="CORREO USUARIO" id="023CE7C1-1AF3-6E57-A2DB-4D034F16BF7E">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:01:55 UTC</createdTime>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
@@ -55,7 +55,7 @@
 <dataTypeSize>100</dataTypeSize>
 <ownDataTypeParameters>100,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID_UBIGEO" id="1B7A4349-5EA8-3B49-B594-9DDDA3A90CAE">
+<Attribute name="ID UBIGEO" id="1B7A4349-5EA8-3B49-B594-9DDDA3A90CAE">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:12:03 UTC</createdTime>
 <generatorID>354EB90B-2BEE-5C96-994F-FB1AFAAB168A</generatorID>
@@ -67,6 +67,34 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ES REGISTRO" id="2C14811D-6D3E-B65A-3EFE-3A0AD4765BD4">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 06:58:44 UTC</createdTime>
+<generatorID>4BE3CAC0-1CB2-7DB4-9C97-9179767719F7</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<engineerTo>
+<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="FE NACIMIENTO" id="6661D6AB-E060-9638-FAE1-890984A93E04">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 06:58:44 UTC</createdTime>
+<generatorID>06CF1F98-DD47-AC14-9EB0-C31927EB0426</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<engineerTo>
+<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>

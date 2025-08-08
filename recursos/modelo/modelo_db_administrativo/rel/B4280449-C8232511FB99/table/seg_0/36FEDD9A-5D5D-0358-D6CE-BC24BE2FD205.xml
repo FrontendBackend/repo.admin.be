@@ -72,9 +72,20 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="FE_NACIMIENTO" id="06CF1F98-DD47-AC14-9EB0-C31927EB0426">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 04:25:21 UTC</createdTime>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="44F52F9E-837C-57D9-40A5-D2A670F13018" name="USUARIO_PK">
+<ind_PK_UK id="44F52F9E-837C-57D9-40A5-D2A670F13018" name="TBL_USUARIO_PK">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:12:57 UTC</createdTime>
 <generatorID>A58C8EA4-DADE-F3D7-9446-1C3C7FD61061</generatorID>
@@ -86,7 +97,7 @@
 <colUsage columnID="B78AED97-8C78-1300-0BB4-148AA9EFA947"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="0AA2CB20-0A25-2978-9121-18ECAAC9D09E" name="USUARIO_UBIGEO_FK">
+<ind_PK_UK id="0AA2CB20-0A25-2978-9121-18ECAAC9D09E" name="TBL_USUARIO_TBL_UBIGEO_FK">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:12:57 UTC</createdTime>
 <generatorID>354EB90B-2BEE-5C96-994F-FB1AFAAB168A</generatorID>
