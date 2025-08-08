@@ -34,13 +34,13 @@ async function crearUsuario(dto) {
   };
 }
 
-async function modificarUsuario(id, dto) {
+async function modificarUsuario(idUsuario, dto) {
   const correo = dto.correoUsuario.trim().toLowerCase();
 
   // Obtener el usuario actual
   const usuarioActual = await db.query(
     `SELECT correo_usuario FROM tbl_usuario WHERE id_usuario = $1 AND es_registro = '1'`,
-    [id]
+    [idUsuario]
   );
 
   if (usuarioActual.rows.length === 0) {
@@ -57,7 +57,7 @@ async function modificarUsuario(id, dto) {
   if (correo !== correoActual) {
     const correoExistente = await db.query(
       `SELECT 1 FROM tbl_usuario WHERE correo_usuario = $1 AND id_usuario != $2 AND es_registro = '1'`,
-      [correo, id]
+      [correo, idUsuario]
     );
 
     if (correoExistente.rows.length > 0) {
@@ -75,7 +75,7 @@ async function modificarUsuario(id, dto) {
      SET nombre_usuario = $1, correo_usuario = $2, id_ubigeo = $3, fe_nacimiento = $5
      WHERE id_usuario = $4 AND es_registro = '1'
      RETURNING *`,
-    [dto.nombreUsuario, correo, dto.idUbigeo, id, dto.feNacimiento]
+    [dto.nombreUsuario, correo, dto.idUbigeo, idUsuario, dto.feNacimiento]
   );
 
   return {
@@ -100,14 +100,14 @@ async function listarUsuario() {
   };
 }
 
-async function obtenerUsuarioPorId(id) {
+async function obtenerUsuarioPorId(idUsuario) {
   const result = await db.query(
     `SELECT usu.id_usuario, usu.nombre_usuario, usu.correo_usuario, usu.id_ubigeo, 
      (ubi.departamento || ', ' || ubi.provincia || ', ' || ubi.distrito) AS nombre_ubigeo, usu.fe_nacimiento
      FROM tbl_usuario usu
      inner join tbl_ubigeo ubi on (ubi.id_ubigeo = usu.id_ubigeo)
      WHERE usu.id_usuario = $1 AND usu.es_registro = '1'`,
-    [id]
+    [idUsuario]
   );
   if (result.rows.length === 0) {
     return {
@@ -123,13 +123,13 @@ async function obtenerUsuarioPorId(id) {
   };
 }
 
-async function eliminarUsuario(id) {
+async function eliminarUsuario(idUsuario) {
   const result = await db.query(
     `UPDATE tbl_usuario
      SET es_registro = '0'
      WHERE id_usuario = $1 AND es_registro = '1'
      RETURNING *`,
-    [id]
+    [idUsuario]
   );
   return {
     tipoResultado: TipoResultado.SUCCESS,
