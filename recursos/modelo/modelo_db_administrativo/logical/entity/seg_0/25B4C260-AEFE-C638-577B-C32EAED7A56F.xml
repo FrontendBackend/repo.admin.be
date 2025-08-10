@@ -31,15 +31,29 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID TIPO DOC IDENTIDAD" id="0228CC00-889D-A8E2-0C8E-5D19EA142AE7">
+<Attribute name="ID TIPO DOC IDENTIDAD" id="8C5C7EE1-381E-604C-7C1D-E67BC7F6E46E">
 <createdBy>jvale</createdBy>
-<createdTime>2025-08-08 06:58:44 UTC</createdTime>
-<commentInRDBMS>Código de tipo de documento de identidad de la persona. Los valores admisibles se encuentran en la tabla &lt;&lt;PGIM_TP_VALOR_PARAMETRO&gt;&gt; cuando el parámetro relacionado cumple con la condición &lt;&lt;PGIM_TP_PARAMETRO.CO_PARAMETRO&gt;&gt; = TIPO_DOCUMENTO_IDENTIDAD. Finalmente, el valor persistido en esta columna es el valor obtenido de &lt;&lt;PGIM_TP_VALOR_PARAMETRO.ID_VALOR_PARAMETRO&gt;&gt;.  Tabla padre: PGIM_TP_VALOR_PARAMETRO</commentInRDBMS>
-<generatorID>B644D21E-9D4E-0631-CEAB-B544BE077438</generatorID>
+<createdTime>2025-08-08 18:58:37 UTC</createdTime>
+<generatorID>3AB0E258-2AC7-A448-44A1-7A4DB59130F8</generatorID>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
 <engineerTo>
 <item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
 </engineerTo>
+<referedAttribute>1FE95DD2-E8AE-A051-9745-AD878F1AB83A</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ID UBIGEO" id="BB94E0DC-65EC-FF85-B2C0-9D57D3221E5B">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 06:58:56 UTC</createdTime>
+<generatorID>583C0AEB-7ACB-E02E-FA1D-0C021E2EB5D9</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<engineerTo>
+<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
+</engineerTo>
+<referedAttribute>58F5FB03-A57A-5DEC-232B-1DAAA5695CE3</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -71,8 +85,8 @@
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
 <use>0</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<domain>6B8882F4-8FF3-9BAB-033B-A5380D18C967</domain>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>E2DDB974-EB7F-993A-47F1-AF5FB2352083</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="NO RAZON SOCIAL" id="329CEAAE-FFB9-810A-8ADA-98B6405F18E2">
@@ -401,29 +415,16 @@
 <domain>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="ID UBIGEO" id="BB94E0DC-65EC-FF85-B2C0-9D57D3221E5B">
-<createdBy>jvale</createdBy>
-<createdTime>2025-08-08 06:58:56 UTC</createdTime>
-<generatorID>583C0AEB-7ACB-E02E-FA1D-0C021E2EB5D9</generatorID>
-<ownerDesignName>modelo_db_administrativo</ownerDesignName>
-<engineerTo>
-<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
-</engineerTo>
-<referedAttribute>58F5FB03-A57A-5DEC-232B-1DAAA5695CE3</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A0A8EA5C-87CE-23AC-80AB-D658E9168C36" name="PGIM TM PERSONA PK">
+<identifier id="A0A8EA5C-87CE-23AC-80AB-D658E9168C36" name="TBL_PERSONA_PK">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-08 06:58:44 UTC</createdTime>
 <generatorID>FFEE42E3-E982-C233-792F-8ECCE43398A7</generatorID>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
+<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

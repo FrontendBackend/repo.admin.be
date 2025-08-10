@@ -86,12 +86,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="5555837C-C1E7-EC62-7574-1976B34F8F0E" name="UBIGEO PK">
+<identifier id="5555837C-C1E7-EC62-7574-1976B34F8F0E" name="TBL_UBIGEO_PK">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:03:14 UTC</createdTime>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
+<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

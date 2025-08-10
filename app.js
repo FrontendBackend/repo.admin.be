@@ -10,9 +10,11 @@ app.use(express.json());
 
 const userRoutes = require("./routes/usuarioRoutes");
 const ubigeoRoutes = require("./routes/ubigeoRoutes");
+const personaRoutes = require("./routes/personaRoutes");
 
 app.use("/api/usuarios", userRoutes);
 app.use("/api/ubigeos", ubigeoRoutes);
+app.use("/api/personas", personaRoutes);
 
 // siempre al final
 app.use(errorHandler);

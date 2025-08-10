@@ -99,12 +99,13 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="A58C8EA4-DADE-F3D7-9446-1C3C7FD61061" name="USUARIO PK">
+<identifier id="A58C8EA4-DADE-F3D7-9446-1C3C7FD61061" name="TBL_USUARIO_PK">
 <createdBy>jvale</createdBy>
 <createdTime>2025-08-03 20:04:46 UTC</createdTime>
 <ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="true"/>
+<item key="B4280449-6E7F-66F8-CF25-C8232511FB99" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
