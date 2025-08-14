@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="73986758-7857-F85D-EEC0-C573C07BA17F" containerWithKeyObject="81954D7F-4C11-B381-9421-CCF8AE9D7B6A" localFKIndex="71CCCAB0-BD2E-0DCE-1088-14C95A20617E" name="TBL_VALOR_PARAMETRO_TBL_PARAMETRO_FK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>A8D0D0D3-4537-F7FF-8CE9-D877D699D68F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<referredTableLongName>TBL_PARAMETRO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F88A5EA8-8663-A05B-BBA8-69D472F12536</referredTableID>
+<keyObject>AC8DBC67-C706-E18C-73F6-26D738B9FF75</keyObject>
+<referredKeyID>AC8DBC67-C706-E18C-73F6-26D738B9FF75</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PARAMETRO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

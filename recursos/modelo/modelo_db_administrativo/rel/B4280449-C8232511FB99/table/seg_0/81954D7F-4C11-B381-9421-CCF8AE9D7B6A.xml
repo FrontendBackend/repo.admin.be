@@ -1,0 +1,252 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="81954D7F-4C11-B381-9421-CCF8AE9D7B6A" name="TBL_VALOR_PARAMETRO">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Valor del parámetro de la aplicación</commentInRDBMS>
+<generatorID>F860D962-08F7-6E95-ADDB-FAB69383110B</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_VALOR_PARAMETRO" id="02DC90BD-212E-5F4C-4254-2E0F29E3CF42">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Identificador del valor del parámetro. Secuencia: PGIM_SEQ_VALOR_PARAMETRO</commentInRDBMS>
+<generatorID>1FE95DD2-E8AE-A051-9745-AD878F1AB83A</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_PARAMETRO" id="714DC591-1A30-3D67-209E-95486F3A4D8A">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>27F9BB9F-F379-B439-B72E-1571C0854F74</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="73986758-7857-F85D-EEC0-C573C07BA17F" referredColumn="B97668A6-49AD-02E0-F20A-CC26E7C2FB95"/>
+</associations>
+</Column>
+<Column name="CO_CLAVE_TEXTO" id="F9E2A3A4-BF9D-7648-403B-8BA7D3CCB9EA">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Clave en texto del ítem del parámetro. Este valor sirve para mapear los códigos de negocio empleados por ejemplo para las listas.</commentInRDBMS>
+<generatorID>4F8E8A52-E70B-26FD-5DCB-7856D960B894</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B7A914CB-62CF-2881-7492-46FD9EA97581</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO_CLAVE" id="B4FFB4BB-E256-6734-23C1-9DF179CE0C8C">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Clave del ítem del parámetro. Este valor sirve para mapear los códigos de negocio empleados por ejemplo para las listas.</commentInRDBMS>
+<generatorID>04CAFAFE-8969-67E3-03EC-9010A7820190</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>C323ABFC-FFF1-5216-00EE-4E8F35E338D2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NO_VALOR_PARAMETRO" id="2C58B167-4787-5B80-EB08-54C03904D7F0">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Nombre del valor parámetro</commentInRDBMS>
+<generatorID>1C3236FE-3B03-FADA-AED8-0513BA02F984</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>4B3E4684-6BE9-AB1D-64FB-92080EDB7405</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_VALOR_PARAMETRO" id="59CFD057-57AE-5DAD-1EED-87FF1F310AF1">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Descripción del valor parámetro</commentInRDBMS>
+<generatorID>2913C75A-8400-25F7-4CEF-A4FC5852CA82</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6FAE353D-41A8-2243-2B2C-F77F576AD59A</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NU_ORDEN" id="CE1D5736-7C0C-2349-794C-2C7B028C0524">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Número de orden en la presentación</commentInRDBMS>
+<generatorID>76851C98-A686-C4AD-D2E9-4BE3348F0856</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>78D62C9C-220F-5039-F971-BA25610EFB91</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_VALOR_ALFANUM" id="695C1002-1645-69F3-8FEE-3DFE6E3C556E">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Valor alfanumérico del Código</commentInRDBMS>
+<generatorID>BFD1D6FC-EF55-4BAB-4EDE-D0225B6C9E73</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C71D18D7-2206-B904-62E8-56FF50A6622E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NU_VALOR_NUMERICO" id="B142E781-1579-AD75-1583-80F40507A749">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Valor numérico del código</commentInRDBMS>
+<generatorID>90069240-05A7-EB1C-5ED8-7DA3C50369CD</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>324E548B-3D7D-98B2-717A-C3EA2E078586</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FL_ACTIVO" id="608A81CF-7840-6A98-E6D9-44E018ED32A4">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Indicador lógico que determina si el valor del parámetro del Osinergmin se encuentra activo o no</commentInRDBMS>
+<generatorID>413C3A09-034E-1D24-C006-85659FADC73F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>6A4BA256-8AAE-AB12-7C93-C1BF1F25C2C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ES_REGISTRO" id="F22C0B07-ED66-6ACA-1023-31D66974EC16">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Estado del registro. Los posibles valores son: &quot;1&quot; = Activo y &quot;0&quot; = Inactivo</commentInRDBMS>
+<generatorID>F17C8965-1219-929C-8B5D-518985951273</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>6A4BA256-8AAE-AB12-7C93-C1BF1F25C2C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="US_CREACION" id="42762D94-6E2B-A9E7-EE37-1ACE479AE5B5">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Usuario creador</commentInRDBMS>
+<generatorID>4961B4D0-F5F5-03A4-6B6C-7005A649DACE</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IP_CREACION" id="1B521F0A-CEE8-A2A1-40A4-A8A76F26D408">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Terminal de creación</commentInRDBMS>
+<generatorID>0EEAD3D1-F9EC-A9BA-AB02-4ADA81EDBFBE</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FE_CREACION" id="95775518-69E2-C442-0DBC-D47141B41479">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Fecha y hora de creación</commentInRDBMS>
+<generatorID>56196647-9CA7-DF69-6260-EFDC5E04D443</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="US_ACTUALIZACION" id="3AD0A553-8278-0068-5235-2B468FB4F6C2">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Usuario modificador</commentInRDBMS>
+<generatorID>40431C71-2AF4-B715-4A81-2A9ACE413A86</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IP_ACTUALIZACION" id="3FB14844-7E90-95FA-1F05-CEF6CA55E93F">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Terminal de modificación</commentInRDBMS>
+<generatorID>58CF4C9C-D1D3-BD9D-59F7-0D66ECE1D1B9</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FE_ACTUALIZACION" id="168DC8AC-D54B-022D-4D92-4FD6351FE3AA">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Fecha y hora de modificación</commentInRDBMS>
+<generatorID>9FCA0678-FFCC-8995-68AA-0579654F780F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D5C15B7C-CFC3-784C-2CC7-A7ABDA2D5B11" name="TBL_VALOR_PARAMETRO_PK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>6586F34D-3916-C16F-FE4C-F01EE72FAA91</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="02DC90BD-212E-5F4C-4254-2E0F29E3CF42"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="71CCCAB0-BD2E-0DCE-1088-14C95A20617E" name="TBL_VALOR_PARAMETRO_TBL_PARAMETRO_FK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>A8D0D0D3-4537-F7FF-8CE9-D877D699D68F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="714DC591-1A30-3D67-209E-95486F3A4D8A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

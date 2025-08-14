@@ -20,7 +20,7 @@ async function listarPersona() {
     return {
       tipoResultado: TipoResultado.WARNING,
       mensaje: "No contiene ningún registro de personas",
-      data: 0,
+      data: result.rows.map((row) => new PersonaModel(row)),
     };
   }
 

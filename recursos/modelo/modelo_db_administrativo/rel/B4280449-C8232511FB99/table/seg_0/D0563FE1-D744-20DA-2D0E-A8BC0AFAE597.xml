@@ -1,0 +1,400 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D0563FE1-D744-20DA-2D0E-A8BC0AFAE597" name="TBL_PERSONA">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Persona (natural o jurídica)</commentInRDBMS>
+<generatorID>25B4C260-AEFE-C638-577B-C32EAED7A56F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PERSONA" id="C55311D3-9ACE-54A6-76C0-796E51636B90">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Identificador interno de la persona. Secuencia: PGIM_SEQ_PERSONA</commentInRDBMS>
+<generatorID>56C09B57-BE82-39F1-0754-BC216116F2C6</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ID_TIPO_DOC_IDENTIDAD" id="E72BEB60-416B-D49E-0A3E-2627AE18A853">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>8C5C7EE1-381E-604C-7C1D-E67BC7F6E46E</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="70A3BDC1-2007-A73E-8F36-DDCD789E4FC7" referredColumn="02DC90BD-212E-5F4C-4254-2E0F29E3CF42"/>
+</associations>
+</Column>
+<Column name="ID_UBIGEO" id="996AF721-73D8-A44F-77E8-35BEA30259E1">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>BB94E0DC-65EC-FF85-B2C0-9D57D3221E5B</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="33C6CD89-877D-0295-0FDE-DB03A71B0990" referredColumn="EA41785A-AA89-6D9C-1E5D-2B15E212A52B"/>
+</associations>
+</Column>
+<Column name="FL_CONSORCIO" id="FD939045-EA7C-1BCA-45AC-4F8007658438">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Indicador lógico que señala si el la persona jurídica es o no un consorcio. Los posibles valores son: &quot;1&quot; = Sí y &quot;0&quot; = No</commentInRDBMS>
+<generatorID>E0890A89-4D30-B860-417E-90DC42DCF4E6</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>6A4BA256-8AAE-AB12-7C93-C1BF1F25C2C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CO_DOCUMENTO_IDENTIDAD" id="A4929C13-A4D9-AA47-7D98-D4C53ABA49BE">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Número de documento de identidad</commentInRDBMS>
+<generatorID>53CBEE59-47C1-BB55-387A-D271B5EAC799</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>30</dataTypeSize>
+<ownDataTypeParameters>30,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NO_RAZON_SOCIAL" id="6E4D098B-8CAF-5DD5-8717-D9091DCB8D77">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Razón social de la persona jurídica</commentInRDBMS>
+<generatorID>329CEAAE-FFB9-810A-8ADA-98B6405F18E2</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0A726890-A010-BBD9-FC7B-D6F4BC5A58FE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NO_CORTO" id="223EF5F6-BDCD-F0CB-0E8A-E983D3F26992">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Nombre corto de la persona jurídica</commentInRDBMS>
+<generatorID>DED24ADD-72D0-C9C9-D97B-41EEC7C34FF4</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7387F931-2D6F-FE15-080C-763FEFCB431D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NO_PERSONA" id="6700ECCF-15BB-3A66-484F-378B311E0206">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Nombres de la persona natural</commentInRDBMS>
+<generatorID>D1AA63B3-9B0C-CD49-2FF9-D0CB3ABED6A8</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0085A62C-723A-9B8B-3698-20356300C410</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AP_PATERNO" id="36903C3D-2EC5-023B-E416-DC454931E301">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Apellido paterno de la persona natural</commentInRDBMS>
+<generatorID>4E4A6119-BC49-02F0-7E1A-0C85B1D71E4A</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0085A62C-723A-9B8B-3698-20356300C410</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AP_MATERNO" id="04BE7EB2-8C88-AEEE-19B0-71C580F82C1D">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Apellido materno de la persona natural</commentInRDBMS>
+<generatorID>9BDC86C3-D4AA-71C4-C786-5D66100F7577</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0085A62C-723A-9B8B-3698-20356300C410</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TI_SEXO" id="36033345-8027-980F-A2CD-739E405B36A6">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Sexo. Los valores admisibles son: &quot;1&quot;: Masculino y &quot;0&quot;: Femenino</commentInRDBMS>
+<generatorID>88EDAA4D-669A-E807-91F0-137C29458A29</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>6A4BA256-8AAE-AB12-7C93-C1BF1F25C2C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FE_NACIMIENTO" id="D4B32AB6-32E1-6BCF-8068-DCEEB9A7AF57">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Fecha de nacimiento</commentInRDBMS>
+<generatorID>3345CAF1-D304-8BC1-AECF-794F0A65B9B4</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_TELEFONO" id="DAEA15D8-2BB0-25F6-2FA0-02E604A08AC1">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Teléfono</commentInRDBMS>
+<generatorID>D6D07BF8-4D1F-CC52-94C3-264AC7940AF2</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6B8882F4-8FF3-9BAB-033B-A5380D18C967</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_TELEFONO2" id="C35394AC-20C1-C284-FFAC-52D1AFCC5E9E">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Teléfono 02</commentInRDBMS>
+<generatorID>7CD6F113-B0DA-4DEF-7074-73ABCBC9C834</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6B8882F4-8FF3-9BAB-033B-A5380D18C967</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_CORREO" id="FD3073EE-82C7-A757-F3B7-7C9A68D3B421">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Correo electrónico</commentInRDBMS>
+<generatorID>4B730634-21B7-6EF3-3CA6-861EB9068F89</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B7A914CB-62CF-2881-7492-46FD9EA97581</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_CORREO2" id="021A4314-D900-5D35-0EB3-1F20B773E898">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Correo electrónico 02</commentInRDBMS>
+<generatorID>142F76ED-6C74-CFF9-8B9C-66C6B49597DF</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B7A914CB-62CF-2881-7492-46FD9EA97581</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DI_PERSONA" id="ACAA30CF-BB10-D81C-9C20-19F547601C9C">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Dirección</commentInRDBMS>
+<generatorID>5FB06DC2-C4E5-C07D-1A05-B1B093A9C6BF</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0A726890-A010-BBD9-FC7B-D6F4BC5A58FE</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CM_NOTA" id="99F67083-101E-EC26-6815-F9E0DD46EDF4">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Nota</commentInRDBMS>
+<generatorID>FA4C67E4-C8B5-8C39-75AE-158CFFD4FA1B</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>7387F931-2D6F-FE15-080C-763FEFCB431D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DE_RESTRICCION" id="4F587462-FDB8-7DBC-7B3B-095A69D8E376">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Restricción de acuerdo con el Reniec</commentInRDBMS>
+<generatorID>E885224C-25D4-6DAD-D89F-20202EF8F3DB</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>E2DDB974-EB7F-993A-47F1-AF5FB2352083</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="NO_PREFIJO_PERSONA" id="3C74CD15-835B-FB2A-B10C-1B5955121667">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Prefijo de la persona natural; para el caso de persona jurídica no se debe permitir registrar valor alguno</commentInRDBMS>
+<generatorID>D533C1E8-4A3B-5001-E536-EEA7CFA7DF1C</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B7A914CB-62CF-2881-7492-46FD9EA97581</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="ES_REGISTRO" id="567A3940-B604-3DB1-78D6-9EC2CEDDDFE8">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Estado del registro. Los posibles valores son: &quot;1&quot; = Activo y &quot;0&quot; = Inactivo</commentInRDBMS>
+<generatorID>0EB968CA-A9A2-7426-02CC-6DBA44A026B4</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<domain>6A4BA256-8AAE-AB12-7C93-C1BF1F25C2C6</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="US_CREACION" id="54BA7712-7858-8F55-A244-448AC74845C0">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Usuario creador</commentInRDBMS>
+<generatorID>8B245120-7BB2-2D06-4393-A6FD911E111F</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IP_CREACION" id="E72219A9-EDFC-BC09-4BB2-64252DBA706C">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Terminal de creación</commentInRDBMS>
+<generatorID>9301FE00-9558-035E-998C-0E417AF4677E</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FE_CREACION" id="EAB04149-D200-F4DF-47A2-E08961F8AE3C">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Fecha y hora de creación</commentInRDBMS>
+<generatorID>0AEE3B64-42C9-274B-2802-30B4B1D5B79B</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="US_ACTUALIZACION" id="88551659-B4AE-7FD3-2E83-AA4E7C6F3B99">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Usuario modificador</commentInRDBMS>
+<generatorID>4EF6E758-BA4C-6B23-8113-99D4F051FD20</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="IP_ACTUALIZACION" id="75C4A70D-8C45-D8FA-9909-9935668024B9">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Terminal de modificación</commentInRDBMS>
+<generatorID>D8621EE0-0C4F-0B8A-2DD7-F782C6C885F6</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FEEF8E38-6237-BED0-4521-2DB2790E6C84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="FE_ACTUALIZACION" id="F38F3BF4-598D-D457-BAA6-7EEB879FA817">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<commentInRDBMS>Fecha y hora de modificación</commentInRDBMS>
+<generatorID>8D4E9926-78CA-CD97-E95F-0EA57B0CC763</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>CF0DD9F2-BBD1-C5E7-4553-6CAAC5B9FEF5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="24446FFE-D7E5-5837-BCE8-31420DB288A5" name="TBL_PERSONA_PK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>A0A8EA5C-87CE-23AC-80AB-D658E9168C36</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C55311D3-9ACE-54A6-76C0-796E51636B90"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24A82844-CA64-C9CF-790F-0ED04FAEE98E" name="TBL_PERSONA_TBL_VALOR_PARAMETRO_FK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>3AB0E258-2AC7-A448-44A1-7A4DB59130F8</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E72BEB60-416B-D49E-0A3E-2627AE18A853"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E2AFB7BD-CCE8-1657-DC31-5158D506EADF" name="TBL_PERSONA_TBL_UBIGEO_FK">
+<createdBy>jvale</createdBy>
+<createdTime>2025-08-08 21:28:33 UTC</createdTime>
+<generatorID>583C0AEB-7ACB-E02E-FA1D-0C021E2EB5D9</generatorID>
+<ownerDesignName>modelo_db_administrativo</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="996AF721-73D8-A44F-77E8-35BEA30259E1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
