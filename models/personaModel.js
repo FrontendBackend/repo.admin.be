@@ -1,11 +1,11 @@
 class PersonaModel {
   constructor(row) {
-    this.idersona = row.id_persona;
+    this.idPersona = row.id_persona;
     this.idTipoDocIdentidad = row.id_tipo_doc_identidad;
     this.idUbigeo = row.id_ubigeo;
     this.flConsorcio = row.fl_consorcio;
-    this.coDocumentoIdentidad = row.co_documento_identidad;
-    this.noRazoSocial = row.no_razon_social;
+    this.coDocumentoIdentidad = row.co_documento_identidad.trim();
+    this.noRazonSocial = row.no_razon_social;
     this.noCorto = row.no_corto;
     this.noPersona = row.no_persona;
     this.apPaterno = row.ap_paterno;

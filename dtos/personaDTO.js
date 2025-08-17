@@ -1,11 +1,11 @@
 class PersonaDTO {
   constructor(data) {
-    this.idersona = data.idersona;
+    this.idPersona = data.idPersona;
     this.idTipoDocIdentidad = data.idTipoDocIdentidad;
     this.idUbigeo = data.idUbigeo;
     this.flConsorcio = data.flConsorcio;
     this.coDocumentoIdentidad = data.coDocumentoIdentidad;
-    this.noRazoSocial = data.noRazoSocial.trim();
+    this.noRazonSocial = data.noRazonSocial.trim();
     this.noCorto = data.noCorto.trim();
     this.noPersona = data.noPersona.trim();
     this.apPaterno = data.apPaterno.trim();
@@ -27,6 +27,11 @@ class PersonaDTO {
     this.usActualizacion = data.usActualizacion;
     this.ipActualizacion = data.ipActualizacion;
     this.feActualizacion = data.feActualizacion;
+  }
+
+  validate() {
+    const errors = [];
+    return errors;
   }
 }
 
