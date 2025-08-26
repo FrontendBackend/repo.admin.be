@@ -5,6 +5,7 @@ const { validateDto } = require("../middlewares/validateDTO");
 const PersonaDTO = require("../dtos/personaDTO");
 
 router.get("/listarPersona", personaController.listarPersona);
+router.post("/paginarPersona", personaController.paginarPersona);
 router.post("/crearPersona", validateDto(PersonaDTO), personaController.crearPersona);
 router.get("/obtenerPersonaPorId/:idPersona", personaController.obtenerPersonaPorId);
 router.put("/modificarPersona/:idPersona", validateDto(PersonaDTO), personaController.modificarPersona);

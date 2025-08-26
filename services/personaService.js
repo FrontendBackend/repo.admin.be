@@ -31,6 +31,85 @@ async function listarPersona() {
   };
 }
 
+async function paginarPersona(paginadorDTO) {
+  const { page, limit, nombreCompleto, idTipoDocIdentidad, sort } = paginadorDTO;
+  const offset = (page - 1) * limit;
+
+  // Construimos condiciones dinámicas
+  let conditions = `WHERE per.es_registro = '1'`;
+  const params = [];
+
+  if (nombreCompleto && nombreCompleto.trim() !== "") {
+    params.push(`%${nombreCompleto.trim()}%`);
+    conditions += ` AND ( (COALESCE(per.no_persona,'') || ' ' || COALESCE(per.ap_paterno,'') || ' ' || COALESCE(per.ap_materno,'')) ILIKE $${params.length} )`;
+  }
+
+
+  if (idTipoDocIdentidad && idTipoDocIdentidad !== "") {
+    params.push(idTipoDocIdentidad);
+    conditions += ` AND per.id_tipo_doc_identidad = $${params.length}`;
+  }
+
+  // --- Consulta para el total ---
+  const countResult = await db.query(
+    `
+      SELECT COUNT(*) as total
+      FROM tbl_persona per
+      ${conditions}
+    `,
+    params
+  );
+
+  const total = parseInt(countResult.rows[0].total, 10);
+
+  // --- Consulta con paginación ---
+  params.push(limit);
+  params.push(offset);
+
+  const result = await db.query(
+    `
+      SELECT per.id_persona, per.id_tipo_doc_identidad, per.id_ubigeo, per.fl_consorcio, per.co_documento_identidad, 
+             per.no_razon_social, per.no_corto, per.no_persona, per.ap_paterno, per.ap_materno, per.ti_sexo, per.fe_nacimiento, 
+             per.de_telefono, per.de_telefono2, per.de_correo, per.de_correo2, per.di_persona, per.cm_nota, per.de_restriccion, 
+             per.no_prefijo_persona, per.es_registro, vap.no_valor_parametro, 
+             (ubi.departamento || ', ' || ubi.provincia || ', ' || ubi.distrito) AS nombre_ubigeo
+      FROM tbl_persona per
+      INNER JOIN tbl_ubigeo ubi on (ubi.id_ubigeo = per.id_ubigeo)
+      INNER JOIN tbl_valor_parametro vap on (vap.id_valor_parametro = per.id_tipo_doc_identidad)
+      ${conditions}
+      ORDER BY ${sort}
+      LIMIT $${params.length - 1} OFFSET $${params.length}
+    `,
+    params
+  );
+
+  if (result.rows.length === 0) {
+    return {
+      tipoResultado: TipoResultado.WARNING,
+      mensaje: "No contiene ningún registro de personas",
+      data: {
+        data: [],
+        total,
+        page,
+        limit,
+        totalPages: Math.ceil(total / limit),
+      },
+    };
+  }
+
+  return {
+    tipoResultado: TipoResultado.SUCCESS,
+    mensaje: "Se ha listado y paginado las personas correctamente",
+    data: {
+      data: result.rows.map((row) => new PersonaModel(row)),
+      total,
+      page,
+      limit,
+      totalPages: Math.ceil(total / limit),
+    },
+  };
+}
+
 async function crearPersona(dto) {
   const correoExistente = await db.query(
     `SELECT 1 FROM tbl_persona WHERE es_registro = '1' AND de_correo = $1`,
@@ -257,6 +336,7 @@ async function eliminarPersona(idPersona) {
 
 module.exports = {
   listarPersona,
+  paginarPersona,
   crearPersona,
   modificarPersona,
   obtenerPersonaPorId,
