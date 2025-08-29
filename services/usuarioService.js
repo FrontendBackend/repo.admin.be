@@ -1,11 +1,11 @@
-const db = require("../db/index");
 
+const { query } = require("../db");
 const { MyException, TipoResultado } = require("../exceptions/MyException");
 const UsuarioModel = require("../models/UsuarioModel");
 
 async function crearUsuario(dto) {
   // 1. Verificamos si el correo ya existe
-  const correoExistente = await db.query(
+  const correoExistente = await query(
     `SELECT 1 FROM tbl_usuario WHERE es_registro = '1' AND correo_usuario = $1`,
     [dto.correoUsuario]
   );
@@ -20,7 +20,7 @@ async function crearUsuario(dto) {
   }
 
   // Forzamos es_registro a '1' al crear
-  const result = await db.query(
+  const result = await query(
     `INSERT INTO tbl_usuario (nombre_usuario, correo_usuario, es_registro, id_ubigeo, fe_nacimiento)
      VALUES ($1, $2, $3, $4, $5)
      RETURNING *`,
@@ -38,7 +38,7 @@ async function modificarUsuario(idUsuario, dto) {
   const correo = dto.correoUsuario.trim().toLowerCase();
 
   // Obtener el usuario actual
-  const usuarioActual = await db.query(
+  const usuarioActual = await query(
     `SELECT correo_usuario FROM tbl_usuario WHERE id_usuario = $1 AND es_registro = '1'`,
     [idUsuario]
   );
@@ -55,7 +55,7 @@ async function modificarUsuario(idUsuario, dto) {
 
   // Validar solo si el correo fue cambiado
   if (correo !== correoActual) {
-    const correoExistente = await db.query(
+    const correoExistente = await query(
       `SELECT 1 FROM tbl_usuario WHERE correo_usuario = $1 AND id_usuario != $2 AND es_registro = '1'`,
       [correo, idUsuario]
     );
@@ -70,7 +70,7 @@ async function modificarUsuario(idUsuario, dto) {
   }
 
   // Ejecutar la actualización
-  const result = await db.query(
+  const result = await query(
     `UPDATE tbl_usuario
      SET nombre_usuario = $1, correo_usuario = $2, id_ubigeo = $3, fe_nacimiento = $5
      WHERE id_usuario = $4 AND es_registro = '1'
@@ -86,7 +86,7 @@ async function modificarUsuario(idUsuario, dto) {
 }
 
 async function listarUsuario() {
-  const result = await db.query(
+  const result = await query(
     `SELECT usu.id_usuario, usu.nombre_usuario, usu.correo_usuario, usu.id_ubigeo, 
      (ubi.departamento || ', ' || ubi.provincia || ', ' || ubi.distrito) AS nombre_ubigeo, usu.fe_nacimiento
      FROM tbl_usuario usu
@@ -101,7 +101,7 @@ async function listarUsuario() {
 }
 
 async function obtenerUsuarioPorId(idUsuario) {
-  const result = await db.query(
+  const result = await query(
     `SELECT usu.id_usuario, usu.nombre_usuario, usu.correo_usuario, usu.id_ubigeo, 
      (ubi.departamento || ', ' || ubi.provincia || ', ' || ubi.distrito) AS nombre_ubigeo, usu.fe_nacimiento
      FROM tbl_usuario usu
@@ -124,7 +124,7 @@ async function obtenerUsuarioPorId(idUsuario) {
 }
 
 async function eliminarUsuario(idUsuario) {
-  const result = await db.query(
+  const result = await query(
     `UPDATE tbl_usuario
      SET es_registro = '0'
      WHERE id_usuario = $1 AND es_registro = '1'

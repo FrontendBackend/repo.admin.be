@@ -1,4 +1,4 @@
-const db = require("../db");
+const { query } = require("../db");
 const { TipoResultado } = require("../exceptions/MyException");
 const UbigeoModel = require("../models/ubigeoModel");
 
@@ -10,7 +10,7 @@ const UbigeoModel = require("../models/ubigeoModel");
  */
 async function listarUbigeo() {
 
-  const result = await db.query(
+  const result = await query(
     `SELECT ubi.id_ubigeo, ubi.departamento, ubi.provincia, ubi.distrito
      FROM tbl_ubigeo ubi`
   );
@@ -36,21 +36,22 @@ async function buscarUbigeosPorFiltro(filtro) {
     };
   }
 
-  const result = await db.query(
+  const result = await query(
     `SELECT id_ubigeo, codigo_ubigeo, departamento, provincia, distrito
      FROM tbl_ubigeo
-     WHERE LOWER(departamento) LIKE LOWER($1)
-        OR LOWER(provincia) LIKE LOWER($1)
-        OR LOWER(distrito) LIKE LOWER($1)
+     WHERE departamento LIKE ? COLLATE NOCASE
+        OR provincia LIKE ? COLLATE NOCASE
+        OR distrito LIKE ? COLLATE NOCASE
      ORDER BY departamento, provincia, distrito
      LIMIT 20`,
-    [`%${filtro}%`]
+    [`%${filtro}%`, `%${filtro}%`, `%${filtro}%`]
   );
 
   return {
     tipoResultado: TipoResultado.SUCCESS,
-    mensaje: "Ubigeos encontrados con exito",
-    data: result.rows.map((row) => new UbigeoModel(row)),
+    mensaje: "Ubigeos encontrados con éxito",
+    data: result.map((row) => new UbigeoModel(row)),
   };
 }
+
 module.exports = { listarUbigeo, buscarUbigeosPorFiltro };
