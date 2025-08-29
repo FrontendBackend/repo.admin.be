@@ -1,6 +1,6 @@
 
 const { query } = require("../db");
-const { MyException, TipoResultado } = require("../exceptions/MyException");
+const { TipoResultado } = require("../exceptions/MyException");
 const UsuarioModel = require("../models/usuarioModel");
 
 async function crearUsuario(dto) {
