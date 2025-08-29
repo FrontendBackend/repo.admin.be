@@ -1,7 +1,7 @@
 
 const { query } = require("../db");
 const { MyException, TipoResultado } = require("../exceptions/MyException");
-const UsuarioModel = require("../models/UsuarioModel");
+const UsuarioModel = require("../models/usuarioModel");
 
 async function crearUsuario(dto) {
   // 1. Verificamos si el correo ya existe

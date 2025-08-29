@@ -42,6 +42,6 @@ jobs:
           key: ${{ secrets.SERVER_SSH_KEY }}
           script: |
             docker pull ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest
-            docker stop express-app || true
-            docker rm express-app || true
-            docker run -d --name express-app -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest
+            docker stop backend_administrativo || true
+            docker rm backend_administrativo || true
+            docker run -d --name backend_administrativo -p 3000:3000 ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest
