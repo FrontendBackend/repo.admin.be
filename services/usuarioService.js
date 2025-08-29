@@ -6,7 +6,7 @@ const UsuarioModel = require("../models/usuarioModel");
 async function crearUsuario(dto) {
   // 1. Verificamos si el correo ya existe
   const correoExistente = await query(
-    `SELECT 1 FROM tbl_usuario WHERE es_registro = '1' AND correo_usuario = $1`,
+    `SELECT 1 FROM tbl_usuario WHERE es_registro = '1' AND correo_usuario = ?`,
     [dto.correoUsuario]
   );
 
@@ -22,7 +22,7 @@ async function crearUsuario(dto) {
   // Forzamos es_registro a '1' al crear
   const result = await query(
     `INSERT INTO tbl_usuario (nombre_usuario, correo_usuario, es_registro, id_ubigeo, fe_nacimiento)
-     VALUES ($1, $2, $3, $4, $5)
+     VALUES (?, ?, ?, ?, ?)
      RETURNING *`,
     [dto.nombreUsuario, dto.correoUsuario, "1", dto.idUbigeo, dto.feNacimiento]
   );
@@ -30,7 +30,7 @@ async function crearUsuario(dto) {
   return {
     tipoResultado: TipoResultado.SUCCESS,
     mensaje: "Usuario creado correctamente",
-    data: new UsuarioModel(result.rows[0]),
+    data: new UsuarioModel(result[0]),
   };
 }
 
@@ -39,11 +39,11 @@ async function modificarUsuario(idUsuario, dto) {
 
   // Obtener el usuario actual
   const usuarioActual = await query(
-    `SELECT correo_usuario FROM tbl_usuario WHERE id_usuario = $1 AND es_registro = '1'`,
+    `SELECT correo_usuario FROM tbl_usuario WHERE id_usuario = ? AND es_registro = '1'`,
     [idUsuario]
   );
 
-  if (usuarioActual.rows.length === 0) {
+  if (usuarioActual.length === 0) {
     return {
       tipoResultado: TipoResultado.ERROR,
       mensaje: "No se encontró el usuario activo para modificar",
@@ -51,16 +51,16 @@ async function modificarUsuario(idUsuario, dto) {
     };
   }
 
-  const correoActual = usuarioActual.rows[0].correo_usuario.toLowerCase();
+  const correoActual = usuarioActual[0].correo_usuario.toLowerCase();
 
   // Validar solo si el correo fue cambiado
   if (correo !== correoActual) {
     const correoExistente = await query(
-      `SELECT 1 FROM tbl_usuario WHERE correo_usuario = $1 AND id_usuario != $2 AND es_registro = '1'`,
+      `SELECT 1 FROM tbl_usuario WHERE correo_usuario = ? AND id_usuario != ? AND es_registro = '1'`,
       [correo, idUsuario]
     );
 
-    if (correoExistente.rows.length > 0) {
+    if (correoExistente.length > 0) {
       return {
         tipoResultado: TipoResultado.WARNING,
         mensaje: "El correo ya está registrado por otro usuario.",
@@ -72,8 +72,8 @@ async function modificarUsuario(idUsuario, dto) {
   // Ejecutar la actualización
   const result = await query(
     `UPDATE tbl_usuario
-     SET nombre_usuario = $1, correo_usuario = $2, id_ubigeo = $3, fe_nacimiento = $5
-     WHERE id_usuario = $4 AND es_registro = '1'
+     SET nombre_usuario = ?, correo_usuario = ?, id_ubigeo = ?, fe_nacimiento = ?
+     WHERE id_usuario = ? AND es_registro = '1'
      RETURNING *`,
     [dto.nombreUsuario, correo, dto.idUbigeo, idUsuario, dto.feNacimiento]
   );
@@ -81,7 +81,7 @@ async function modificarUsuario(idUsuario, dto) {
   return {
     tipoResultado: TipoResultado.SUCCESS,
     mensaje: "El usuario ha sido modificado correctamente",
-    data: new UsuarioModel(result.rows[0]),
+    data: new UsuarioModel(result[0]),
   };
 }
 
@@ -96,7 +96,7 @@ async function listarUsuario() {
   return {
     tipoResultado: TipoResultado.SUCCESS,
     mensaje: "Se ha listado los usuarios correctamente",
-    data: result.rows.map((row) => new UsuarioModel(row)),
+    data: result.map((row) => new UsuarioModel(row)),
   };
 }
 
@@ -106,10 +106,10 @@ async function obtenerUsuarioPorId(idUsuario) {
      (ubi.departamento || ', ' || ubi.provincia || ', ' || ubi.distrito) AS nombre_ubigeo, usu.fe_nacimiento
      FROM tbl_usuario usu
      inner join tbl_ubigeo ubi on (ubi.id_ubigeo = usu.id_ubigeo)
-     WHERE usu.id_usuario = $1 AND usu.es_registro = '1'`,
+     WHERE usu.id_usuario = ? AND usu.es_registro = '1'`,
     [idUsuario]
   );
-  if (result.rows.length === 0) {
+  if (result.length === 0) {
     return {
       tipoResultado: TipoResultado.ERROR,
       mensaje: "El usuario no ha sido encontrado",
@@ -119,7 +119,7 @@ async function obtenerUsuarioPorId(idUsuario) {
   return {
     tipoResultado: TipoResultado.SUCCESS,
     mensaje: "El usuario ha sido encontrado",
-    data: new UsuarioModel(result.rows[0]),
+    data: new UsuarioModel(result[0]),
   };
 }
 
@@ -127,7 +127,7 @@ async function eliminarUsuario(idUsuario) {
   const result = await query(
     `UPDATE tbl_usuario
      SET es_registro = '0'
-     WHERE id_usuario = $1 AND es_registro = '1'
+     WHERE id_usuario = ? AND es_registro = '1'
      RETURNING *`,
     [idUsuario]
   );
