@@ -1,5 +1,5 @@
-# Imagen base oficial de Node.js
-FROM node:18
+# Imagen base con glibc 2.38+
+FROM node:20-bookworm
 
 # Crear directorio de trabajo
 WORKDIR /app
@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
-# Instalar dependencias de producción
+# Instalar dependencias de producción dentro del contenedor
 RUN npm install --production
 
 # Copiar el resto del código
