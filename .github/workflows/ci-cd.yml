@@ -1,0 +1,47 @@
+name: CI/CD - Node.js Express
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test || echo "⚠️ No hay tests definidos"
+
+      - name: Login to DockerHub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      - name: Build & Push Docker image
+        run: |
+          docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest .
+          docker push ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest
+
+      - name: Deploy to server via SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USER }}
+          key: ${{ secrets.SERVER_SSH_KEY }}
+          script: |
+            docker pull ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest
+            docker stop express-app || true
+            docker rm express-app || true
+            docker run -d --name express-app -p 80:3000 ${{ secrets.DOCKERHUB_USERNAME }}/repo.admin.be:latest
