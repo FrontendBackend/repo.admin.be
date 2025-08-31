@@ -35,17 +35,17 @@ async function buscarUbigeosPorFiltro(filtro) {
       data: [],
     };
   }
-
+  // 👉 Normalizar filtro
   const filtroNormalizado = normalizarTexto(filtro);
 
   const result = await query(
     `SELECT id_ubigeo, codigo_ubigeo, departamento, provincia, distrito
-     FROM tbl_ubigeo
-    WHERE departamento LIKE ? COLLATE NOCASE
-      OR provincia LIKE ? COLLATE NOCASE
-      OR distrito LIKE ? COLLATE NOCASE
-     ORDER BY departamento, provincia, distrito
-     LIMIT 20`,
+   FROM tbl_ubigeo
+   WHERE REPLACE(REPLACE(REPLACE(REPLACE(departamento, 'Á', 'A'), 'É', 'E'), 'Í', 'I'), 'Ñ', 'N') LIKE ?
+      OR REPLACE(REPLACE(REPLACE(REPLACE(provincia, 'Á', 'A'), 'É', 'E'), 'Í', 'I'), 'Ñ', 'N') LIKE ?
+      OR REPLACE(REPLACE(REPLACE(REPLACE(distrito, 'Á', 'A'), 'É', 'E'), 'Í', 'I'), 'Ñ', 'N') LIKE ?
+   ORDER BY departamento, provincia, distrito
+   LIMIT 20`,
     [
       `%${filtroNormalizado}%`,
       `%${filtroNormalizado}%`,
@@ -60,11 +60,12 @@ async function buscarUbigeosPorFiltro(filtro) {
   };
 }
 
+// 👉 Función para normalizar texto (quita tildes y pasa ñ -> n)
 function normalizarTexto(texto) {
   return texto
-    .normalize("NFD") // separa letras y acentos
-    .replace(/[\u0300-\u036f]/g, "") // quita acentos
-    .replace(/n/gi, "ñ"); // convierte ñ en
+    .normalize("NFD")                // Descompone acentos
+    .replace(/[\u0300-\u036f]/g, "") // Quita acentos
+    .replace(/ñ/gi, "n");            // Convierte ñ -> n
 }
 
 module.exports = { listarUbigeo, buscarUbigeosPorFiltro };
