@@ -64,7 +64,7 @@ function normalizarTexto(texto) {
   return texto
     .normalize("NFD") // separa letras y acentos
     .replace(/[\u0300-\u036f]/g, "") // quita acentos
-    .replace(/ñ/gi, "n"); // convierte ñ en
+    .replace(/ñ/gi, "ñ"); // convierte ñ en
 }
 
 module.exports = { listarUbigeo, buscarUbigeosPorFiltro };
