@@ -36,15 +36,21 @@ async function buscarUbigeosPorFiltro(filtro) {
     };
   }
 
+  const filtroNormalizado = normalizarTexto(filtro);
+
   const result = await query(
     `SELECT id_ubigeo, codigo_ubigeo, departamento, provincia, distrito
      FROM tbl_ubigeo
-     WHERE departamento LIKE ? COLLATE NOCASE
-        OR provincia LIKE ? COLLATE NOCASE
-        OR distrito LIKE ? COLLATE NOCASE
+     WHERE normalizarTexto(departamento) LIKE ?
+      OR normalizarTexto(provincia) LIKE ?
+      OR normalizarTexto(distrito) LIKE ?
      ORDER BY departamento, provincia, distrito
      LIMIT 20`,
-    [`%${filtro}%`, `%${filtro}%`, `%${filtro}%`]
+    [
+      `%${filtroNormalizado}%`,
+      `%${filtroNormalizado}%`,
+      `%${filtroNormalizado}%`,
+    ]
   );
 
   return {
@@ -52,6 +58,14 @@ async function buscarUbigeosPorFiltro(filtro) {
     mensaje: "Ubigeos encontrados con éxito",
     data: result.map((row) => new UbigeoModel(row)),
   };
+}
+
+function normalizarTexto(texto) {
+  return texto
+    .normalize("NFD") // separa base y acentos
+    .replace(/[\u0300-\u036f]/g, "") // elimina tildes (á->a, é->e...)
+    .replace(/ñ/gi, "n") // reemplaza ñ->n
+    .toUpperCase(); // opcional: para unificar mayúsculas
 }
 
 module.exports = { listarUbigeo, buscarUbigeosPorFiltro };
