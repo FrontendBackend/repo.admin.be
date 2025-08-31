@@ -41,9 +41,9 @@ async function buscarUbigeosPorFiltro(filtro) {
   const result = await query(
     `SELECT id_ubigeo, codigo_ubigeo, departamento, provincia, distrito
      FROM tbl_ubigeo
-     WHERE normalizarTexto(departamento) LIKE ?
-      OR normalizarTexto(provincia) LIKE ?
-      OR normalizarTexto(distrito) LIKE ?
+    WHERE departamento LIKE ? COLLATE NOCASE
+      OR provincia LIKE ? COLLATE NOCASE
+      OR distrito LIKE ? COLLATE NOCASE
      ORDER BY departamento, provincia, distrito
      LIMIT 20`,
     [
@@ -62,10 +62,9 @@ async function buscarUbigeosPorFiltro(filtro) {
 
 function normalizarTexto(texto) {
   return texto
-    .normalize("NFD") // separa base y acentos
-    .replace(/[\u0300-\u036f]/g, "") // elimina tildes (á->a, é->e...)
-    .replace(/ñ/gi, "n") // reemplaza ñ->n
-    .toUpperCase(); // opcional: para unificar mayúsculas
+    .normalize("NFD") // separa letras y acentos
+    .replace(/[\u0300-\u036f]/g, "") // quita acentos
+    .replace(/ñ/gi, "n"); // convierte ñ en
 }
 
 module.exports = { listarUbigeo, buscarUbigeosPorFiltro };
