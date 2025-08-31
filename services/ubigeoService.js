@@ -39,9 +39,9 @@ async function buscarUbigeosPorFiltro(filtro) {
   const result = await query(
     `SELECT id_ubigeo, codigo_ubigeo, departamento, provincia, distrito
      FROM tbl_ubigeo
-     WHERE LOWER(departamento) LIKE LOWER(?)
-      OR LOWER(provincia) LIKE LOWER(?)
-      OR LOWER(distrito) LIKE LOWER(?)
+     WHERE departamento LIKE ? COLLATE NOCASE
+        OR provincia LIKE ? COLLATE NOCASE
+        OR distrito LIKE ? COLLATE NOCASE
      ORDER BY departamento, provincia, distrito
      LIMIT 20`,
     [`%${filtro}%`, `%${filtro}%`, `%${filtro}%`]
