@@ -17,7 +17,7 @@ async function listarUbigeo() {
   return {
     tipoResultado: TipoResultado.SUCCESS,
     mensaje: "Se ha listado el ubigeo correctamente",
-    data: result.rows.map((row) => new UbigeoModel(row)),
+    data: result.map((row) => new UbigeoModel(row)),
   };
 }
 
@@ -39,9 +39,9 @@ async function buscarUbigeosPorFiltro(filtro) {
   const result = await query(
     `SELECT id_ubigeo, codigo_ubigeo, departamento, provincia, distrito
      FROM tbl_ubigeo
-     WHERE departamento LIKE ? COLLATE NOCASE
-        OR provincia LIKE ? COLLATE NOCASE
-        OR distrito LIKE ? COLLATE NOCASE
+     WHERE normalize(departamento) LIKE ?
+      OR normalize(provincia) LIKE ?
+      OR normalize(distrito) LIKE ?
      ORDER BY departamento, provincia, distrito
      LIMIT 20`,
     [`%${filtro}%`, `%${filtro}%`, `%${filtro}%`]
