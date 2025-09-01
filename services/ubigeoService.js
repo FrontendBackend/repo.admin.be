@@ -35,6 +35,7 @@ async function buscarUbigeosPorFiltro(filtro) {
       data: [],
     };
   }
+  
   // 👉 Normalizar filtro
   const filtroNormalizado = normalizarTexto(filtro);
 
